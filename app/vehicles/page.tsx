@@ -43,7 +43,7 @@ export default function VehiclesPage() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const newVehicle: Vehicle = {
       id: vehicles.length + 1,

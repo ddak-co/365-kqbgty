@@ -28,17 +28,6 @@ const DashboardPreview = () => {
     { id: 3, type: '정기점검', daysLeft: 8, status: 'critical' },
   ])
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'critical':
-        return 'bg-red-100 text-red-700'
-      case 'warning':
-        return 'bg-yellow-100 text-yellow-700'
-      default:
-        return 'bg-green-100 text-green-700'
-    }
-  }
-
   return (
     <div className="grid gap-6">
       <div>
@@ -47,11 +36,7 @@ const DashboardPreview = () => {
           {expirations.map((item) => (
             <div
               key={item.id}
-              className={`p-4 rounded-lg border-l-4 ${
-                item.status === 'critical'
-                  ? 'bg-red-50 border-red-400'
-                  : 'bg-yellow-50 border-yellow-400'
-              }`}
+              className={`p-4 rounded-lg border-l-4 ${item.status === 'critical' ? 'bg-red-50 border-red-400' : 'bg-yellow-50 border-yellow-400'}`}
             >
               <div className="flex items-center justify-between">
                 <span className="font-medium text-gray-900">{item.type}</span>

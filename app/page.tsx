@@ -18,21 +18,13 @@ export default function Home() {
       <div className="flex gap-4 mb-6 border-b border-gray-200">
         <button
           onClick={() => setActiveTab('dashboard')}
-          className={`px-4 py-2 font-medium transition ${
-            activeTab === 'dashboard'
-              ? 'text-blue-600 border-b-2 border-blue-600'
-              : 'text-gray-600 hover:text-gray-900'
-          }`}
+          className={`px-4 py-2 font-medium transition ${activeTab === 'dashboard' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-900'}`}
         >
           대시보드
         </button>
         <button
           onClick={() => setActiveTab('features')}
-          className={`px-4 py-2 font-medium transition ${
-            activeTab === 'features'
-              ? 'text-blue-600 border-b-2 border-blue-600'
-              : 'text-gray-600 hover:text-gray-900'
-          }`}
+          className={`px-4 py-2 font-medium transition ${activeTab === 'features' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-900'}`}
         >
           기능 미리보기
         </button>

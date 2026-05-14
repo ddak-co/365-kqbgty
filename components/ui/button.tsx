@@ -7,6 +7,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   className?: string
+  type?: 'button' | 'submit' | 'reset'
 }
 
 const Button = ({
@@ -16,6 +17,7 @@ const Button = ({
   variant = 'primary',
   size = 'md',
   className = '',
+  type = 'button',
 }: ButtonProps) => {
   const baseStyles = 'font-medium rounded-lg transition duration-200 inline-block'
 
@@ -42,7 +44,7 @@ const Button = ({
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes}>
       {children}
     </button>
   )
